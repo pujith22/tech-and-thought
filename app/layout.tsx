@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://pujith-tech-and-thought.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pujith.com",
     siteName: "Pujith's Tech & Thought",
     title: "Pujith Sai Kumar Korlepara - Systems & Machine Intelligence",
     description: "Personal blog and portfolio exploring systems engineering, machine intelligence, and technical deep dives.",
@@ -37,9 +37,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const canonicalUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pujith.com";
   return (
     <html lang="en">
       <body className={inter.className}>
+        <link rel="canonical" href={canonicalUrl} />
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">

@@ -107,6 +107,24 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          <div>
+            <h3 className="font-bold mb-4 text-gray-900 dark:text-gray-100">Email</h3>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <a href="mailto:contact@pujith.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">contact@pujith.com</a>
+                <span className="ml-2 text-gray-500">(Primary)</span>
+              </li>
+              <li>
+                <a href="mailto:hola@pujith.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">hola@pujith.com</a>
+                <span className="ml-2 text-gray-500">(Alternate)</span>
+              </li>
+              <li>
+                <a href="mailto:pujith@cse.iitb.ac.in" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">pujith@cse.iitb.ac.in</a>
+                <span className="ml-2 text-gray-500">(Academic)</span>
+              </li>
+            </ul>
+          </div>
         </div>
         
         <div className="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">

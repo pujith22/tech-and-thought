@@ -27,8 +27,9 @@ export default function ContactPage() {
             <h2 className="text-xl font-bold">Email</h2>
           </div>
           <div className="space-y-3">
+            <ContactReveal type="email" value="contact@pujith.com" label="(Primary)" />
+            <ContactReveal type="email" value="hola@pujith.com" label="(Alternate)" />
             <ContactReveal type="email" value="pujith@cse.iitb.ac.in" label="(Academic)" />
-            <ContactReveal type="email" value="pujith22.sde@gmail.com" label="(Personal)" />
           </div>
         </div>
 

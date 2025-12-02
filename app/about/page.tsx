@@ -149,6 +149,14 @@ export default function AboutPage() {
             This is my digital space to share <strong>technical deep dives</strong>, <strong>research explorations</strong>, and <strong>personal reflections</strong>. 
             It's a window into my journey of continuous learning in systems, ML, and beyond.
           </p>
+          <div className="mt-6">
+            <h3 className="text-lg font-semibold mb-2">Contact</h3>
+            <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+              <li><a href="mailto:contact@pujith.com" className="hover:underline">contact@pujith.com</a> <span className="text-gray-500">(Primary)</span></li>
+              <li><a href="mailto:hola@pujith.com" className="hover:underline">hola@pujith.com</a> <span className="text-gray-500">(Alternate)</span></li>
+              <li><a href="mailto:pujith@cse.iitb.ac.in" className="hover:underline">pujith@cse.iitb.ac.in</a> <span className="text-gray-500">(Academic)</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -161,7 +161,9 @@ pujith-tech-and-thought/
 
 ## 📧 Contact
 
-- Email: pujith@cse.iitb.ac.in / pujith22.sde@gmail.com
+- Email: contact@pujith.com (Primary)
+- Email: hola@pujith.com (Alternate)
+- Email: pujith@cse.iitb.ac.in (Academic)
 - GitHub: [@pujith22](https://github.com/pujith22)
 - LinkedIn: [pujith22](https://www.linkedin.com/in/pujith22)
 - Twitter: [@pujith28](https://www.x.com/pujith28)
