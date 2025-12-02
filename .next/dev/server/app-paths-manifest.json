@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js",
+  "/posts/[slug]/page": "app/posts/[slug]/page.js",
+  "/posts/page": "app/posts/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/science/page": "app/science/page.js",
+  "/tech/page": "app/tech/page.js",
+  "/theory/page": "app/theory/page.js",
+  "/trips/page": "app/trips/page.js"
+}
