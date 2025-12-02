@@ -42,6 +42,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <link rel="canonical" href={canonicalUrl} />
+        {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ? (
+          <script
+            defer
+            data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
+            src="https://plausible.io/js/script.js"
+          ></script>
+        ) : null}
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">

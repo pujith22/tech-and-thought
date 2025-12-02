@@ -127,6 +127,22 @@ Update navigation links in `components/ui/Header.tsx` and `components/ui/Footer.
 3. Configure environment variables
 4. Deploy!
 
+### Enable Analytics (Plausible)
+
+- Set `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` in your environment (e.g., `pujith.com`).
+- The Plausible script is automatically injected by `app/layout.tsx` when this variable is set.
+
+### Enable Comments (Giscus)
+
+- Set the following environment variables:
+  - `NEXT_PUBLIC_GISCUS_REPO` (e.g., `username/repo`)
+  - `NEXT_PUBLIC_GISCUS_REPO_ID`
+  - `NEXT_PUBLIC_GISCUS_CATEGORY` (e.g., `Announcements`)
+  - `NEXT_PUBLIC_GISCUS_CATEGORY_ID`
+- Use the `GiscusComments` component where you want comments (e.g., at the end of a post page).
+  - Path: `components/ui/GiscusComments.tsx`
+  - It auto-maps discussions by `pathname` and respects dark mode via `preferred_color_scheme`.
+
 ### Build Locally
 
 ```bash

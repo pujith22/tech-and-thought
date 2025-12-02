@@ -1,3 +1,4 @@
+import CopyEmail from '@/components/ui/CopyEmail';
 import Image from 'next/image';
 
 export const metadata = {
@@ -152,9 +153,9 @@ export default function AboutPage() {
           <div className="mt-6">
             <h3 className="text-lg font-semibold mb-2">Contact</h3>
             <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-              <li><a href="mailto:contact@pujith.com" className="hover:underline">contact@pujith.com</a> <span className="text-gray-500">(Primary)</span></li>
-              <li><a href="mailto:hola@pujith.com" className="hover:underline">hola@pujith.com</a> <span className="text-gray-500">(Alternate)</span></li>
-              <li><a href="mailto:pujith@cse.iitb.ac.in" className="hover:underline">pujith@cse.iitb.ac.in</a> <span className="text-gray-500">(Academic)</span></li>
+              <li><CopyEmail email="contact@pujith.com" label="(Primary)" /></li>
+              <li><CopyEmail email="hola@pujith.com" label="(Alternate)" /></li>
+              <li><CopyEmail email="pujith@cse.iitb.ac.in" label="(Academic)" /></li>
             </ul>
           </div>
         </div>

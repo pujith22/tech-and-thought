@@ -7,6 +7,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
+import GiscusComments from '@/components/ui/GiscusComments';
 
 export async function generateStaticParams() {
   const posts = await getAllContent<PostFrontmatter>('posts');
@@ -83,6 +84,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <div className="prose prose-lg dark:prose-invert max-w-none">
           {mdxContent}
         </div>
+        {process.env.NEXT_PUBLIC_GISCUS_REPO ? (
+          <GiscusComments />
+        ) : null}
       </article>
     );
   } catch (error) {
