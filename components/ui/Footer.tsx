@@ -107,22 +107,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold mb-4 text-gray-900 dark:text-gray-100">Email</h3>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <CopyEmail email="contact@pujith.com" label="(Primary)" />
-              </li>
-              <li>
-                <CopyEmail email="hola@pujith.com" label="(Alternate)" />
-              </li>
-              <li>
-                <CopyEmail email="pujith@cse.iitb.ac.in" label="(Academic)" />
-              </li>
-            </ul>
-          </div>
+          </div>          
         </div>
         
         <div className="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">

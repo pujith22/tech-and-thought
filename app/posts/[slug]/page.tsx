@@ -85,7 +85,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           {mdxContent}
         </div>
         {process.env.NEXT_PUBLIC_GISCUS_REPO ? (
-          <GiscusComments />
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold mb-4">Comments</h2>
+            <GiscusComments />
+          </section>
         ) : null}
       </article>
     );
