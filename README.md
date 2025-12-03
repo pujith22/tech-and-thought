@@ -1,26 +1,31 @@
 # Pujith's Personal Blog
 
-Personal blog and portfolio of Pujith Sai Kumar Korlepara - M.Tech CS @ IIT Bombay. A modern, full-stack blog built with Next.js 15, focusing on systems engineering, machine intelligence, and technical explorations.
+Personal blog and portfolio of Pujith Sai Kumar Korlepara - M.Tech CS @ IIT Bombay. A modern, full-stack blog built with Next.js 16, focusing on systems engineering, machine intelligence, and technical explorations.
 
 ## 🚀 Features
 
-- **Modern Stack**: Next.js 15 with App Router, TypeScript, Tailwind CSS
+- **Modern Stack**: Next.js 16 with App Router, TypeScript, Tailwind CSS v4
 - **MDX Content**: Write posts and trips in MDX with frontmatter
 - **Zero Database**: Content stored as files, no database maintenance
-- **SEO Optimized**: Automatic sitemap, RSS feed, Open Graph tags
-- **Dark Mode**: Built-in dark mode support
+- **SEO Optimized**: Automatic sitemap, RSS feed, Open Graph tags, canonical URLs
+- **Dark Mode**: Built-in dark mode support via `prefers-color-scheme`
 - **Performance**: Static generation with ISR for optimal speed
 - **Typography**: Beautiful reading experience with @tailwindcss/typography
+- **Privacy**: Email/phone obfuscation with click-to-reveal and copy-to-clipboard
+- **Analytics**: Plausible integration (privacy-friendly)
+- **Comments**: Giscus integration for GitHub Discussions-based comments
+- **Responsive Design**: Viewport-based autoscaling for optimal display across all devices
 
 ## 📦 Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS v4
-- **Content**: MDX with next-mdx-remote
-- **Maps**: Leaflet / React-Leaflet
-- **Deployment**: Vercel (recommended)
-- **Analytics**: Plausible (optional)
-- **Comments**: Giscus (optional)
+- **Framework**: Next.js 16 (App Router, Turbopack)
+- **Styling**: Tailwind CSS v4 with @tailwindcss/postcss
+- **Content**: MDX with next-mdx-remote, gray-matter, reading-time
+- **Syntax Highlighting**: rehype-highlight with auto dark mode
+- **Deployment**: Vercel
+- **Analytics**: Plausible (privacy-friendly)
+- **Comments**: Giscus (GitHub Discussions)
+- **Asset Hosting**: GitHub Releases for large files (PDFs)
 
 ## 🛠️ Getting Started
 
@@ -135,13 +140,17 @@ Update navigation links in `components/ui/Header.tsx` and `components/ui/Footer.
 ### Enable Comments (Giscus)
 
 - Set the following environment variables:
-  - `NEXT_PUBLIC_GISCUS_REPO` (e.g., `username/repo`)
-  - `NEXT_PUBLIC_GISCUS_REPO_ID`
+  - `NEXT_PUBLIC_GISCUS_REPO` (e.g., `pujith22/tech-and-thought`)
+  - `NEXT_PUBLIC_GISCUS_REPO_ID` (get from https://giscus.app)
   - `NEXT_PUBLIC_GISCUS_CATEGORY` (e.g., `Announcements`)
-  - `NEXT_PUBLIC_GISCUS_CATEGORY_ID`
-- Use the `GiscusComments` component where you want comments (e.g., at the end of a post page).
-  - Path: `components/ui/GiscusComments.tsx`
-  - It auto-maps discussions by `pathname` and respects dark mode via `preferred_color_scheme`.
+  - `NEXT_PUBLIC_GISCUS_CATEGORY_ID` (get from https://giscus.app)
+- Comments automatically appear on blog post pages when env vars are configured.
+- Requirements:
+  1. Repository must be public
+  2. Discussions must be enabled in GitHub repo settings
+  3. giscus app must be installed: https://github.com/apps/giscus
+- Path: `components/ui/GiscusComments.tsx`
+- Auto-maps discussions by `pathname` and respects dark mode via `preferred_color_scheme`.
 
 ### Build Locally
 
@@ -156,14 +165,23 @@ npm start
 pujith-tech-and-thought/
 ├── app/                    # Next.js App Router pages
 │   ├── posts/             # Blog posts pages
-│   ├── trips/             # Trip pages
+│   ├── trips/             # Trip pages (coming soon)
+│   ├── theory/            # Theory category
+│   ├── science/           # Science category
+│   ├── tech/              # Tech category
+│   ├── cpblog/            # Competitive Programming blog
 │   ├── about/             # About page
-│   ├── contact/           # Contact page
+│   ├── contact/           # Contact page with privacy features
 │   ├── projects/          # Projects page
-│   ├── layout.tsx         # Root layout
+│   ├── layout.tsx         # Root layout with Plausible integration
 │   └── page.tsx           # Home page
 ├── components/
 │   └── ui/                # Reusable UI components
+│       ├── Header.tsx     # Responsive header with mobile menu
+│       ├── Footer.tsx     # Footer with scaled typography
+│       ├── ContactReveal.tsx  # Privacy-friendly contact display
+│       ├── CopyEmail.tsx  # Copy-to-clipboard for emails
+│       └── GiscusComments.tsx # GitHub Discussions comments
 ├── content/
 │   ├── posts/             # Blog post MDX files
 │   └── trips/             # Trip MDX files
