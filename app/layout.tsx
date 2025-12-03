@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "Pujith Sai Kumar Korlepara - Systems & Machine Intelligence",
     template: "%s | Pujith Sai Kumar Korlepara",
   },
-  description: "Personal blog and portfolio of Pujith Sai Kumar Korlepara - M.Tech CS @ IIT Bombay. Exploring systems engineering, machine intelligence, and technical explorations.",
+  description: "Personal blog and portfolio of Pujith Sai Kumar Korlepara - M.Tech Computer Science @ IIT Bombay. Exploring the intersection of Machine intelligence and Systems engineering",
   keywords: ["Machine Learning", "Systems Engineering", "Computer Science", "IIT Bombay", "GATE", "Distributed Systems"],
   authors: [{ name: "Pujith Sai Kumar Korlepara" }],
   creator: "Pujith Sai Kumar Korlepara",

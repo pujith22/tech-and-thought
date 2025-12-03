@@ -25,9 +25,24 @@ body {
   min-height: 100vh;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling with responsive font scaling */
 html {
   scroll-behavior: smooth;
+  /* Base font size scales from 14px (mobile) to 16px (desktop) */
+  font-size: clamp(0.875rem, 0.5rem + 1vw, 1rem);
+}
+
+/* Container max-width scales with viewport */
+.max-w-6xl {
+  max-width: clamp(320px, 90vw, 72rem);
+}
+
+.max-w-4xl {
+  max-width: clamp(320px, 90vw, 56rem);
+}
+
+.max-w-3xl {
+  max-width: clamp(320px, 90vw, 48rem);
 }
 
 /* Custom animations */
